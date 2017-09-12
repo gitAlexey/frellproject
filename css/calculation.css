@@ -1,0 +1,162 @@
+ /*начало выпадающее окно расчета стоимости*/
+    
+ .overl_hide{
+  display: block;
+  position: fixed;
+  list-style:none;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  top: -100%;
+  left: 0;
+  opacity:0.3;
+  transition: top .7s;
+  z-index: 9998;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+ }
+ .hidden-menu {
+  display: block;
+  position: fixed;
+  list-style:none;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #eee;
+  height: 70%;
+  top: -500%;
+  left: 0;
+  transition: top 1s;
+  z-index: 9999;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
+.hidden-menu-ticker {
+  display: none;
+}
+.btn-menu {
+  height: 30px;
+  color: #fff;
+  background-color: #28a7e9;
+  padding: 2px;
+  position:absolute;
+  margin-top: 0px;
+  left: 7%;
+  cursor: pointer;
+
+  z-index: 99991;
+  width: 340px;
+  opacity:0.6;
+      -webkit-transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      -moz-transform: translateZ(0);
+      -moz-backface-visibility: hidden;
+      
+              border-radius: 0 0 6px 6px;
+              -moz-border-radius:0 0 6px 6px; 
+              -webkit-border-radius:0 0 6px 6px; 
+              
+                        -moz-transition: width 0.8s 0.1s ease;
+                        -o-transition: width 0.8s 0.1s ease;
+                        -webkit-transition: width 0.8s 0.1s ease;
+                        -moz-transition: left 1s 0.6s ease;
+                        -o-transition: left 1s 0.6s ease;
+                        -webkit-transition: left 0.6s 1s ease; 
+}
+.btn-menu:hover{
+ opacity:1;
+}
+.btn-menu .line{
+margin-left: 3px;
+width: 25px;
+}
+.btn-menu .text{
+    margin-top: -25px;
+    margin-left: 35px;
+    font-size: 16px;
+        -moz-transition: font-size 0.8s 0.1s ease;
+        -o-transition: font-size 0.8s 0.1s ease;
+        -webkit-transition: font-size 0.8s 0.1s ease;
+}
+.btn-menu span {
+  display: block;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px 0 0;
+  transition: all .1s linear 0.2s;
+  position: relative;
+}
+.btn-menu span.first {
+  margin-top: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu {
+  left: 95%;
+  top:5%;
+  width: 35px;
+       border-radius: 6px;
+       -moz-border-radius:6px; 
+       -webkit-border-radius:6px;
+   transition: left 1s;
+
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu .text {
+font-size: 0px;
+}
+
+.hidden-menu-ticker:checked ~ .hidden-menu {
+  top: 0;
+}
+.hidden-menu-ticker:checked ~ .overl_hide {
+  top: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+  -webkit-transform: rotate(45deg);
+  top: 10px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+  opacity: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+  -webkit-transform: rotate(-45deg);
+  top: -10px;
+}
+/*начало обработка стилей полей ввода*/
+.select_One{
+    color: black;
+    background-color: #E0E4F8;
+    margin: 30px auto auto 20px;
+    width: 70%;
+    }
+        .select_Two{
+        color: black;
+        background-color: #E0E4F8;
+        margin: 25px auto auto 20px;
+        width: 70%;
+        }
+            .select_hideObject{
+                position: fixed;
+                margin-top: -1000px;
+                margin-left: 0;
+                visibility: hidden;
+               
+                                               
+            }
+ ul .list_stage_project{
+    margin-top: 20px;
+   display: block;
+   list-style-type: none;
+ }
+ .label_check{
+    margin-left: 5px;
+    color:black;
+ }           
+/*конецобработка стилей полей ввода*/
+/*конец выпадающее окно расчета стоимости*/
